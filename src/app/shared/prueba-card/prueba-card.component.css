@@ -1,0 +1,13 @@
+.cardsize{
+ width: 550px;
+ height: 400px;
+ background-color: #DADADA;
+}
+.cardSizeL{
+  width: 650px;
+  height: 465px;
+}
+
+.cardS{
+  height: 200px;
+}

@@ -1,0 +1,32 @@
+<div class="d-flex flex-column justify-content-center align-items-center height_container back">
+    <div class="alert alert-success" role="alert" *ngIf="mensaje_">
+        {{mensaje}}
+    </div>
+    <form [formGroup]="form" autocomplete="off" class="cardS">
+      <prueba-card title="Información básica" class="h-100 w-100" [size]="size">
+          <div class="d-flex flex-row align-items-center">
+            <app-prueba-input-text label="Primer Nombre" [readonly]="true" formControlName="primerNombre" class="ml-2">
+            </app-prueba-input-text>
+            <app-prueba-input-text label="Segundo nombre" [readonly]="true" formControlName="segundoNombre">
+            </app-prueba-input-text>
+          </div>
+          <div class="d-flex flex-row align-items-center">
+            <app-prueba-input-text label="Primer apellido" [readonly]="true" formControlName="primerApellido">
+            </app-prueba-input-text>
+            <app-prueba-input-text label="Segundo apellido" [readonly]="true" formControlName="segundoApellido">
+            </app-prueba-input-text>
+          </div>
+          <div class="d-flex flex-row align-items-center">
+            <app-prueba-input-text label="Telefono" [readonly]="true" formControlName="telefono">
+            </app-prueba-input-text>
+            <app-prueba-input-text label="Direccion" [readonly]="true" formControlName="direccion">
+            </app-prueba-input-text>
+          </div>
+          <app-prueba-input-text label="Ciudad de residencia" [readonly]="true" formControlName="ciudadResidencia" style="width: 450px;">
+          </app-prueba-input-text>
+          <prueba-button label="Regresar" icon="bi bi-caret-left-fill" class="mt-4" routerLink="/IngresoInformacion">
+          </prueba-button>
+      </prueba-card>
+
+    </form>
+</div>

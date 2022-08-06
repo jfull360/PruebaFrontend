@@ -1,0 +1,7 @@
+<div class="form-group mb-4 tamanio p-2">
+    <label class="form-label" >{{label}}</label>
+    <input class="form-control mr-4" [type]="type" [disabled]="readonly"
+        [placeholder]="placeholder"
+        [ngModel]="value"
+        (ngModelChange)="onChange($event)">
+</div>

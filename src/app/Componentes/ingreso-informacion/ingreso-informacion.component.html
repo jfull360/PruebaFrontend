@@ -1,0 +1,33 @@
+<div class="d-flex flex-column justify-content-center align-items-center height_container back ">
+
+    <p class="display-3 text-white">Bienvenido</p>
+    <form [formGroup]="form" autocomplete="off" class="cardS" (ngSubmit)="onSave()">
+      <div class="alert alert-danger d-flex align-items-center" role="alert" *ngIf="error_">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+        <div>
+          {{mensaje_error}}
+        </div>
+      </div>
+        <div class="form-group ">
+            <prueba-card title="Ingreso de información" subtitle="Todos los campos son obligatorios"
+                class="h-100 w-100 shadow-lg ">
+                <prueba-select label="Tipo de documento" [options]="catalogo" formControlName="tipo_documento">
+                </prueba-select>
+                <prueba-input label="Número de documento" placeholder="Ingrese un numero de documento" type="text"
+                    formControlName="numero_documento" (keypress)="Solo_Numeros($event)"
+                ></prueba-input>
+                <prueba-button label="Buscar" type="submit" icon="" class="mt-5" *ngIf="loading_"
+                    [isDisable]="form.invalid"></prueba-button>
+                <div *ngIf="!loading_" class="mt-5">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only"></span>
+                    </div>
+                </div>
+
+            </prueba-card>
+        </div>
+    </form>
+</div>
+

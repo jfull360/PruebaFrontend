@@ -1,0 +1,9 @@
+<div  class="cardsize border  rounded  overflow-auto" [ngClass]=" size ? 'cardsize':'cardSizeL' " style="opacity:0.92;">
+    <div class="card-body">
+        <h3 class="text-center  mt-4">{{title}}</h3>
+        <h5 class="card-subtitle  m-4 ">{{subtitle}}</h5>
+        <div class="cardS card-text d-flex justify-content-center flex-column align-items-center h-100">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
